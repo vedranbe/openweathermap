@@ -4,8 +4,8 @@ This script retrieves current weather information using the openweathermap.org A
 ## Features:
 
 - Get weather data for multiple cities: Specify multiple city names to retrieve weather conditions for each location.
-- Choose your units: Select between metric (Celsius, Kelvin) or imperial (Fahrenheit) units for temperature display.
-- Customize language: Access weather information in one of 52 supported languages.
+- Choose your units: Select between metric (Celsius) or imperial (Fahrenheit) units for temperature display.
+- Customize language: Access weather information in one of 50 supported languages.
 
 Variables can be changed here https://github.com/vedranbe/openweathermap/blob/main/js/script.js.
 
