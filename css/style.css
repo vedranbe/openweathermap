@@ -1,0 +1,177 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    background: var(--bg_main);
+    color: var(--text_dark);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* SECTION WEATHER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.weather-section {
+    margin: 20px;
+}
+
+.weather-section .cities {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.weather-section .city {
+    opacity: 0;
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+}
+.weather-section figcaption {
+    letter-spacing: 0.05rem;
+    text-align: center;
+    font-size: 0.675rem;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+}
+
+.weather-section .city-temp {
+    font-size: clamp(3rem, 4vw + 1rem, 5rem);
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+}
+
+.weather-section .city-temp sup {
+    font-size: 2.5rem;
+}
+
+.weather-section .city-name sup {
+    font-size: 0.875rem;
+}
+.weather-section .city-name .current {
+    font-size: 0.675rem;
+}
+.weather-section .details sup {
+    font-size: 0.675rem;
+}
+
+.weather-section .city-name sup {
+    padding: 0.2rem 0.6rem;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+}
+
+.weather-section .city-icon {
+    width: clamp(70px, 4vw + 1rem, 100px);
+    margin: 0 auto;
+}
+
+.weather-section figure {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    text-align: center;
+    width: clamp(70px, 5vw + 1rem, 100px);
+}
+
+.msg {
+    width: 100%;
+    height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    font-size: 2rem;
+}
+.msg.hidden {
+    display: none;
+}
+.msg > div {
+    padding: 20px;
+}
+.msg a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.msg a:hover {
+    color: #fff;
+}
+
+.fadeIn {
+    animation: fadeInAnimation 1s forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 1200px) {
+    .weather-section .cities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .weather-section .city-temp sup {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .weather-section .city-temp sup {
+            font-size: 1.5rem;
+        }
+    .weather-section figure {
+        top: 75px;
+    }
+
+    .weather-section {
+        margin-top: 20px;
+    }
+    .weather-section .cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+
+    .weather-section .cities {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
