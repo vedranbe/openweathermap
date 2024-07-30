@@ -11,7 +11,8 @@ Variables can be changed here https://github.com/vedranbe/openweathermap/blob/ma
 
 ## Preview 
 
-![Screenshot from 2024-07-30 15-15-29](https://github.com/user-attachments/assets/76e2c3c3-7548-443a-893e-74b0299e35de)
+![Screenshot from 2024-07-30 15-15-29](https://github.com/user-attachments/assets/db185680-3138-4926-bd6f-7640f0d79501)
+
 
 ## Important
 You MUST add your API key in order to make it work !!!
